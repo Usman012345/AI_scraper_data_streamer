@@ -91,7 +91,7 @@ sudo systemctl enable --now lead-streamer
 journalctl -u lead-streamer -f
 ```
 
-Configure nginx using `nginx-lead-streamer.conf` with a valid TLS certificate (e.g., via certbot), then reload nginx and restart `lead-streamer` after setting `PUBLIC_BASE_URL`.
+Add the nginx site from `nginx-lead-streamer.conf` (next to the scraper's existing site), move the DNS record, then run certbot. The exact steps and checks are in `../GO_LIVE.md`.
 
 ## 4. API & Ping Examples
 
